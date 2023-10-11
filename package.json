@@ -1,0 +1,14 @@
+{
+  "name": "content-service",
+  "version": "1.0.0",
+  "description": "Content Micro Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "YashGovindani",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
