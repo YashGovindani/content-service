@@ -6,7 +6,7 @@ module.exports = {
         username: "pratilipi",
         password: "pratilipi",
         host: "127.0.0.1",
-        port: 5432,
+        port: 9020,
         database: "pratilipi_content_db"
     }
 }
