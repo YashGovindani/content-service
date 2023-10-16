@@ -50,6 +50,8 @@ var init = async () => {
 
     app.use('/content', routes);
 
+    app.use(express.static('static'));
+
     if(!await db.init()) return;
 
     app.listen(port, () => {

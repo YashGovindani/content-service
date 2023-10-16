@@ -1,7 +1,26 @@
 # content-service
 Content Micro Service for Pratilipi Assignment
 
+## Usage
+### initiate
+```
+npm i
+```
+```
+npm docker:compose
+```
+in another terminal
+```
+npm run start
+```
 
+## Database used
+POSTGRESQL
+
+## Swagger Doc
+```
+http://localhost:9080/doc.html
+```
 
 ## for database:
 ```

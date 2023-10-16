@@ -1,0 +1,1252 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Pratilipi Assignment",
+        "description": "This is an API doc for Assignment",
+        "contact": {
+            "email": "yashgovindani222@gmail.com"
+        }
+    },
+    "tags": [
+        {
+            "name": "user",
+            "description": "User Micro Service"
+        },
+        {
+            "name": "content",
+            "description": "Content Micro Service"
+        },
+        {
+            "name": "user-interaction",
+            "description": "User Interaction Micro Service"
+        }
+    ],
+    "paths": {
+        "/user/add": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Add a new user",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userAddRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userAddResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user/get": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Get users",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userGetRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userGetResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user/update": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Update users",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userUpdateRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userUpdateResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user/delete": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Delete users",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userDeleteRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userDeleteResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/content/add": {
+            "post": {
+                "tags": [
+                    "content"
+                ],
+                "summary": "Add content",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/contentAddRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/contentAddResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/content/delete": {
+            "post": {
+                "tags": [
+                    "content"
+                ],
+                "summary": "Delete content",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/contentDeleteRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/contentDeleteResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/content/get": {
+            "post": {
+                "tags": [
+                    "content"
+                ],
+                "summary": "Get content",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/contentGetRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/contentGetResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/content/getNewContent": {
+            "post": {
+                "tags": [
+                    "content"
+                ],
+                "summary": "Get new content",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/contentNewRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/contentNewResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/content/update": {
+            "post": {
+                "tags": [
+                    "content"
+                ],
+                "summary": "update content",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/contentUpdateRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/contentUpdateResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/content/getTopContent": {
+            "post": {
+                "tags": [
+                    "content"
+                ],
+                "summary": "Top content",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/contentTopRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/contentTopResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user-interaction/like": {
+            "post": {
+                "tags": [
+                    "user-interaction"
+                ],
+                "summary": "like action",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userInteractionLikeRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userInteractionLikeResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user-interaction/read": {
+            "post": {
+                "tags": [
+                    "user-interaction"
+                ],
+                "summary": "read action",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userInteractionReadRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userInteractionReadResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user-interaction/topContent": {
+            "post": {
+                "tags": [
+                    "user-interaction"
+                ],
+                "summary": "Top content API for content",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userInteractionTopContentRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userInteractionTopContentResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user-interaction/unlike": {
+            "post": {
+                "tags": [
+                    "user-interaction"
+                ],
+                "summary": "unlike action",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userInteractionUnlikeRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/userInteractionUnlikeResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "addableUser": {
+                "type": "object",
+                "properties": {
+                    "firstName": {
+                        "type":"string",
+                        "example":"Yash"
+                    },
+                    "lastName": {
+                        "type":"string",
+                        "example":"Govindani"
+                    },
+                    "emailId":{
+                        "type":"string",
+                        "example":"yas@mail.co"
+                    },
+                    "phoneNumber":{
+                        "type":"string",
+                        "example":"+918878855255"
+                    }
+                }
+            },
+            "addableContent": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type":"string",
+                        "example":"Yadjksfsh"
+                    },
+                    "story": {
+                        "type":"string",
+                        "example":"Govihdsjafdjkslafhkjsdafhjdsakndani"
+                    },
+                    "authorId":{
+                        "type":"string",
+                        "example":"dsfsa-sdafsa-dsfa-sfadfda"
+                    }
+                }
+            },
+            "addUserError": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "$ref": "#/components/schemas/addableUser"
+                    },
+                    "messages": {
+                        "type": "array",
+                        "items": {
+                            "type":"string"
+                        },
+                        "example": [
+                            "some error message"
+                        ]
+                    }
+                }
+            },
+            "userAddRequest": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/addableUser"
+                }
+            },
+            "userGetRequest": {
+                "type": "object",
+                "properties": {
+                    "what": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": [
+                            "firstName",
+                            "lastName"
+                        ]
+                    },
+                    "by": {
+                        "type": "object",
+                        "properties": {
+                            "firstName": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "lastName": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "email": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "phoneNumber": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "id": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "userUpdateRequest": {
+                "type": "object",
+                "properties": {
+                    "update": {
+                        "type": "object",
+                        "properties": {
+                            "firstName": {
+                                "type": "string",
+                                "example": "yash"
+                            },
+                            "lastName": {
+                                "type": "string",
+                                "example": "yash"
+                            },
+                            "emailId": {
+                                "type": "string",
+                                "example": "yash"
+                            },
+                            "phoneNumber": {
+                                "type": "string",
+                                "example": "yash"
+                            }
+                        }
+                    },
+                    "by": {
+                        "type": "object",
+                        "properties": {
+                            "firstName": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "lastName": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "email": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "phoneNumber": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "id": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "userDeleteRequest": {
+                "type": "object",
+                "properties": {
+                    "by": {
+                        "type": "object",
+                        "properties": {
+                            "firstName": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "lastName": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "email": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "phoneNumber": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            },
+                            "id": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "contentAddRequest": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/addableContent"
+                        }
+                    },
+                    "userId": {
+                        "type": "string",
+                        "example": "dsaf-dsafd-saf-dfasdf"
+                    }
+                }
+            },
+            "contentDeleteRequest": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "example": "dshaj-fkgjdsgf-hdsfa-dsafgh"
+                    },
+                    "userId": {
+                        "type": "string",
+                        "example": "dshaj-fkgjdsgf-hdsfa-dsafgh"
+                    }
+                }
+            },
+            "contentGetRequest": {
+                "type": "object",
+                "properties": {
+                    "what": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": [
+                            "story",
+                            "titile",
+                            "id"
+                        ]
+                    },
+                    "by": {
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "ydsafhkash"
+                                ]
+                            },
+                            "id": {
+                                "type":"array",
+                                "items":{
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "yash"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "contentNewRequest": {
+                "type": "object",
+                "properties": {
+                    "userId": {
+                        "type": "string",
+                        "example":"dsfsa-sdafsa-dsfa-sfadfda"
+                    }
+                }
+            },
+            "contentUpdateRequest": {
+                "type": "object",
+                "properties": {
+                    "update": {
+                        "type": "object",
+                        "properties": {
+                            "story": {
+                                "type": "string",
+                                "example": "dsjahkfgsjaf"
+                            },
+                            "title": {
+                                "type": "string",
+                                "example": "dshajfgsa"
+                            }
+                        }
+                    },
+                    "id": {
+                        "type": "string",
+                        "example": "dshaj-fkgjdsgf-hdsfa-dsafgh"
+                    }
+                }
+            },
+            "contentTopRequest": {
+                "type": "object",
+                "properties": {
+                    "userId": {
+                        "type": "string",
+                        "example":"dsfsa-sdafsa-dsfa-sfadfda"
+                    }
+                }
+            },
+            "userInteractionLikeRequest": {
+                "type": "object",
+                "properties": {
+                    "userId": {
+                        "type": "string",
+                        "example":"dsfsa-sdafsa-dsfa-sfadfda"
+                    },
+                    "contentId": {
+                        "type": "string",
+                        "example":"dsfsa-sdafsa-dsfa-sfadfda"
+                    }
+                }
+            },
+            "userInteractionReadRequest": {
+                "type": "object",
+                "properties": {
+                    "userId": {
+                        "type": "string",
+                        "example":"dsfsa-sdafsa-dsfa-sfadfda"
+                    },
+                    "contentId": {
+                        "type": "string",
+                        "example":"dsfsa-sdafsa-dsfa-sfadfda"
+                    }
+                }
+            },
+            "userInteractionTopRequest": {
+                "type": "object",
+                "properties": {
+                    "userId": {
+                        "type": "string",
+                        "example":"dsfsa-sdafsa-dsfa-sfadfda"
+                    }
+                }
+            },
+            "userInteractionUnlikeRequest": {
+                "type": "object",
+                "properties": {
+                    "userId": {
+                        "type": "string",
+                        "example":"dsfsa-sdafsa-dsfa-sfadfda"
+                    },
+                    "contentId": {
+                        "type": "string",
+                        "example":"dsfsa-sdafsa-dsfa-sfadfda"
+                    }
+                }
+            },
+            "userAddResponse": {
+                "type":"object",
+                "properties": {
+                    "status": {
+                        "type":"string",
+                        "example":"success"
+                    },
+                    "countOfAdded": {
+                        "type":"integer",
+                        "example":1
+                    },
+                    "messages": {
+                        "type":"array",
+                        "items": {
+                            "#ref": "#/components/schemas/addUserError"
+                        },
+                        "example": [
+                            {
+                                "data": {
+                                    "firstName": "Yash",
+                                    "lastName": "Govindani",
+                                    "emailId": "yas@mail.co",
+                                    "phoneNumber": "+918878855255"
+                                },
+                                "messages": [
+                                    "some error message"
+                                ]
+                            }
+                        ]
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "invalid"
+                    }
+                }
+            },
+            "userGetResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "failed"
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "invlaid"
+                    },
+                    "data": {
+                        "type": "array",
+                        "example": [
+                            {
+                                "id": "dshaj-fkgjdsgf-hdsfa-dsafgh",
+                                "emailId": "yas@mail.co"
+                            }
+                        ]
+                    },
+                    "messages": {
+                        "type":"array",
+                        "items": {
+                            "#ref": "#/components/schemas/addUserError"
+                        },
+                        "example": [
+                            {
+                                "data": {
+                                    "firstName": "Yash",
+                                    "lastName": "Govindani",
+                                    "emailId": "yas@mail.co",
+                                    "phoneNumber": "+918878855255"
+                                },
+                                "messages": [
+                                    "some error message"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "userUpdateResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "failed"
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "invlaid"
+                    },
+                    "messages": {
+                        "type":"array",
+                        "items": {
+                            "#ref": "#/components/schemas/addUserError"
+                        },
+                        "example": [
+                            {
+                                "data": {
+                                    "firstName": "Yash",
+                                    "lastName": "Govindani",
+                                    "emailId": "yas@mail.co",
+                                    "phoneNumber": "+918878855255"
+                                },
+                                "messages": [
+                                    "some error message"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "userDeleteResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "failed"
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "invlaid"
+                    },
+                    "messages": {
+                        "type":"array",
+                        "items": {
+                            "#ref": "#/components/schemas/addUserError"
+                        },
+                        "example": [
+                            {
+                                "data": {
+                                    "firstName": "Yash",
+                                    "lastName": "Govindani",
+                                    "emailId": "yas@mail.co",
+                                    "phoneNumber": "+918878855255"
+                                },
+                                "messages": [
+                                    "some error message"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "contentAddResponse": {
+                "type":"object",
+                "properties": {
+                    "status": {
+                        "type":"string",
+                        "example":"success"
+                    },
+                    "countOfAdded": {
+                        "type":"integer",
+                        "example":1
+                    },
+                    "messages": {
+                        "type":"array",
+                        "items": {
+                            "#ref": "#/components/schemas/addUserError"
+                        },
+                        "example": [
+                            {
+                                "data": {
+                                    "story": "dsafjkgsdhafgkj",
+                                    "title": "dhsajfkhg",
+                                    "authorId": "dhsajfkg"
+                                },
+                                "messages": [
+                                    "some error message"
+                                ]
+                            }
+                        ]
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "invalid"
+                    }
+                }
+            },
+            "contentDeleteResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "failed"
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "invalid id"
+                    }
+                }
+            },
+            "contentGetResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "failed"
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "invlaid"
+                    },
+                    "data": {
+                        "type": "array",
+                        "example": [
+                            {
+                                "id": "dshaj-fkgjdsgf-hdsfa-dsafgh",
+                                "authorId": "yas@mail.co"
+                            }
+                        ]
+                    },
+                    "messages": {
+                        "type":"array",
+                        "items": {
+                            "#ref": "#/components/schemas/addUserError"
+                        },
+                        "example": [
+                            {
+                                "messages": [
+                                    "some error message"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "contentNewResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "failed"
+                    },
+                    "data": {
+                        "type": "array",
+                        "example": [
+                            {
+                                "id":"dshaj-fkgjdsgf-hdsfa-dsafgh",
+                                "authorId":"dshaj-fkgjdsgf-hdsfa-dsafgh",
+                                "title": "dsjafg",
+                                "story": "dsajkfghskdaf",
+                                "created_at": "timestamp"
+                            }
+                        ]
+                    }
+                }
+            },
+            "contentUpdateResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "success"
+                    }
+                }
+            },
+            "contentTopResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "failed"
+                    },
+                    "data": {
+                        "type": "array",
+                        "example": [
+                            {
+                                "id":"dshaj-fkgjdsgf-hdsfa-dsafgh",
+                                "authorId":"dshaj-fkgjdsgf-hdsfa-dsafgh",
+                                "title": "dsjafg",
+                                "story": "dsajkfghskdaf",
+                                "created_at": "timestamp",
+                                "reads": 10,
+                                "likes": 4
+                            }
+                        ]
+                    }
+                }
+            },
+            "userInteractionLikeResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "success"
+                    }
+                }
+            },
+            "userInteractionReadResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "success"
+                    }
+                }
+            },
+            "userInteractionTopResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "success"
+                    },
+                    "data": {
+                        "type": "array",
+                        "example": [
+                            {
+                                "id":"dshaj-fkgjdsgf-hdsfa-dsafgh",
+                                "reads": 10,
+                                "likes": 3
+                            }
+                        ]
+                    }
+                }
+            },
+            "userInteractionUnlikeResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "success"
+                    }
+                }
+            },
+            "ApiResponse": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                },
+                "xml": {
+                    "name": "##default"
+                }
+            }
+        },
+        "requestBodies": {
+            "Pet": {
+                "description": "Pet object that needs to be added to the store",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/Pet"
+                        }
+                    },
+                    "application/xml": {
+                        "schema": {
+                            "$ref": "#/components/schemas/Pet"
+                        }
+                    }
+                }
+            },
+            "UserArray": {
+                "description": "List of user object",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/User"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "securitySchemes": {
+            "petstore_auth": {
+                "type": "oauth2",
+                "flows": {
+                    "implicit": {
+                        "authorizationUrl": "https://petstore3.swagger.io/oauth/authorize",
+                        "scopes": {
+                            "write:pets": "modify pets in your account",
+                            "read:pets": "read your pets"
+                        }
+                    }
+                }
+            },
+            "api_key": {
+                "type": "apiKey",
+                "name": "api_key",
+                "in": "header"
+            }
+        }
+    }
+}
