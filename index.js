@@ -49,6 +49,8 @@ var init = async () => {
 
     app.use('/content', routes);
 
+    if(!await db.init()) return;
+
     app.listen(port, () => {
         console.log("App is listening on port : " + port)
     });

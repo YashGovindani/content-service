@@ -1,4 +1,4 @@
-CREATE TABLE content (
+CREATE TABLE IF NOT EXISTS content (
     id uuid DEFAULT gen_random_uuid (),
     title VARCHAR NOT NULL,
     story VARCHAR NOT NULL,

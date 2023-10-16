@@ -3,5 +3,6 @@ module.exports = {
     get: require("./get"),
     getNewContent: require("./getNewContent"),
     update: require("./update"),
-    delete: require("./delete")
+    delete: require("./delete"),
+    init: require("./initDb")
 };
